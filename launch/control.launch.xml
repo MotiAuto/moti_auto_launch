@@ -1,0 +1,28 @@
+<launch>
+    <node pkg="ps4_ros2" exec="ps4_ros2">
+        <remap from="/ps4/twist" to="/cmd_vel"/>
+        <remap from="/ps4/one" to="/ps4/one"/>
+        <remap from="/ps4/two" to="/ps4/two"/>
+    </node>
+
+    <node pkg="cmd_smoother_ros2" exec="cmd_smoother_ros2_node">
+        <remap from="/cmd_vel" to="/cmd_vel"/>
+        <remap from="/smoothed" to="/smoothed"/>
+
+        <param name="up_gain" value="0.5"/>
+        <param name="down_gain" value="0.1"/>
+        <param name="enable_debug" value="false"/>
+    </node>
+
+    <node pkg="motion_modeler_ros2" exec="omni">
+        <remap from="/cmd_vel" to="/cmd_vel"/>
+        <remap from="/wheel" to="/write"/>
+    </node>
+
+    <node pkg="serial_connector_ros2" exec="serial_connector_ros2_node">
+        <remap from="/write" to="/write"/>
+
+        <param name="port_name" value="/dev/ttyACM0"/>
+        <param name="baud_rate" value="115200"/>
+    </node>
+</launch>
