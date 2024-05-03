@@ -10,4 +10,9 @@
         <param name="frame_id" value="odom"/>
         <param name="child_frame_id" value="imu"/>
     </node>
+
+    <!-- <node pkg="vel_pid_ros2" exec="vel_pid_ros2_node">
+        <remap from="/cmd_vel" to="smoothed"/>
+        <remap from="/output" to="/output"/>
+    </node> -->
 </launch>
