@@ -30,17 +30,17 @@
         <remap from="/wheel" to="/write/wheel"/>
     </node>
 
-    <node pkg="motion_modeler_ros2" exec="one_motor" name="motor_1_modeler">
-        <remap from="/cmd_vel" to="/smoothed/motor_1"/>
-        <remap from="/wheel" to="/write/motor_1"/>
+    <node pkg="motion_modeler_ros2" exec="two_motor" name="motor_1_modeler">
+        <remap from="/float" to="/smoothed/motor_1"/>
+        <remap from="/motor" to="/write/motor_1"/>
     </node>
 
-    <node pkg="serial_connector_ros2" exec="serial_connector_ros2_node" name="wheel_bridge">
+    <!-- <node pkg="serial_connector_ros2" exec="serial_connector_ros2_node" name="wheel_bridge">
         <remap from="/write" to="/write/wheel"/>
 
         <param name="port_name" value="/dev/ttyUSB0"/>
         <param name="baud_rate" value="115200"/>
-    </node>
+    </node> -->
 
     <node pkg="serial_connector_ros2" exec="serial_connector_ros2_node" name="motor_1_bridge">
         <remap from="/write" to="/write/motor_1"/>
