@@ -1,5 +1,5 @@
 <launch>
-    <node pkg="simple_local_planenr" exec="simple_local_planner_node">
+    <node pkg="simple_local_planner" exec="simple_local_planner_node">
         <remap from="/path" to="path"/>
         <remap from="/cmd_vel" to="/cmd_vel"/> 
     </node>
