@@ -1,18 +1,3 @@
 <launch>
-    <include file="$(find-pkg-share haya_imu_ros2)/launch/test.launch.xml"/>
-
-    <node pkg="motiodom" exec="motiodom_node">
-        <remap from="/imu" to="/imu"/>
-        <remap from="/magnet" to="/mag"/>
-
-        <param name="enable_magnet" value="true"/>
-        <param name="enable_position" value="false"/>
-        <param name="frame_id" value="odom"/>
-        <param name="child_frame_id" value="imu"/>
-    </node>
-
-    <!-- <node pkg="vel_pid_ros2" exec="vel_pid_ros2_node">
-        <remap from="/cmd_vel" to="smoothed"/>
-        <remap from="/output" to="/output"/>
-    </node> -->
+    <include file="$(find-pkg-share moti_auto_launch)/launch/localization/ioo_ros2.launch.xml"/>
 </launch>
