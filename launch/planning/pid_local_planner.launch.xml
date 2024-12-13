@@ -1,7 +1,7 @@
 <launch>
     <node pkg="pid_local_planner" exec="pid_local_planner_node">
         <remap from="/target_pose" to="/target"/>
-        <remap from="/current_poaw" to="/current"/>
+        <remap from="/current_pose" to="/current"/>
         <remap from="/cmd_vel" to="/turtle1/cmd_vel"/>
 
         <param name="p_gain" value="1.0"/>
