@@ -9,7 +9,6 @@ Panels:
         - /TF1
         - /TF1/Frames1
         - /Path1
-        - /Odometry1
       Splitter Ratio: 0.5
     Tree Height: 719
   - Class: rviz_common/Selection
@@ -56,13 +55,19 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
+        map:
+          Value: true
+        odom:
+          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: false
       Tree:
-        {}
+        map:
+          odom:
+            {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -80,11 +85,11 @@ Visualization Manager:
         X: 0
         Y: 0
         Z: 0
-      Pose Color: 255; 85; 255
-      Pose Style: Axes
+      Pose Color: 220; 138; 221
+      Pose Style: Arrows
       Radius: 0.029999999329447746
       Shaft Diameter: 0.05000000074505806
-      Shaft Length: 0.10000000149011612
+      Shaft Length: 0.30000001192092896
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -92,45 +97,6 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /path
-      Value: true
-    - Angle Tolerance: 0.10000000149011612
-      Class: rviz_default_plugins/Odometry
-      Covariance:
-        Orientation:
-          Alpha: 0.5
-          Color: 255; 255; 127
-          Color Style: Unique
-          Frame: Local
-          Offset: 1
-          Scale: 1
-          Value: true
-        Position:
-          Alpha: 0.30000001192092896
-          Color: 204; 51; 204
-          Scale: 1
-          Value: true
-        Value: true
-      Enabled: true
-      Keep: 1
-      Name: Odometry
-      Position Tolerance: 0.10000000149011612
-      Shape:
-        Alpha: 1
-        Axes Length: 1
-        Axes Radius: 0.10000000149011612
-        Color: 255; 25; 0
-        Head Length: 0.30000001192092896
-        Head Radius: 0.10000000149011612
-        Shaft Length: 1
-        Shaft Radius: 0.05000000074505806
-        Value: Axes
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        Filter size: 10
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /odom
       Value: true
   Enabled: true
   Global Options:
@@ -178,7 +144,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 21.77434730529785
+      Distance: 3.898629665374756
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -193,10 +159,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.6754000186920166
+      Pitch: 0.4254002273082733
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.663576602935791
+      Yaw: 4.67356014251709
     Saved: ~
 Window Geometry:
   Displays:

@@ -3,4 +3,6 @@
     <include file="$(find-pkg-share moti_auto_launch)/launch/planning.launch.xml"/>
     <include file="$(find-pkg-share moti_auto_launch)/launch/sim/turtlesim_connector.launch.xml"/>
     <include file="$(find-pkg-share moti_auto_launch)/launch/sim/rviz.launch.xml"/>
+
+    <executable cmd="./start_app.sh" output="screen" />
 </launch>
