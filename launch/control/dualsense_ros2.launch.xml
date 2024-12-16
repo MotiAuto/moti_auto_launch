@@ -1,0 +1,10 @@
+<launch>
+    <node pkg="joy" exec="joy_node"/>
+
+    <node pkg="dualsense_ros2" exec="dualsense_ros2_node" name="dualsense_ros2_node">
+        <remap from="/joy" to="/joy"/>
+
+        <remap from="/dualsense/twist" to="/dualsense/twist"/>
+        <remap from="/dualsense/f" to="/dualsense/f"/>
+    </node>
+</launch>

@@ -1,0 +1,14 @@
+<launch>
+    <node pkg="omni_vel_ros2" exec="omni_vel_ros2_node" name="omni_vel_ros2_node">
+        <remap from="/cmd_vel" to="/dualsense/twist"/>
+        <remap from="/posture" to="/posture"/>
+        <remap from="/target_output" to="/to_pico"/>
+
+        <param name="robot_radius" value="0.8"/>
+        <param name="wheel_radius" value="0.1"/>
+        <param name="wheel_rad_1" value="0.0"/>
+        <param name="wheel_rad_2" value="120.0"/>
+        <param name="wheel_rad_3" value="240.0"/>
+        <param name="pwm_mode" value="true"/>
+    </node>
+</launch>
