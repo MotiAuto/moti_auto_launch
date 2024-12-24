@@ -8,4 +8,6 @@
         <remap from="wpc_app_bridge/current" to="/current"/>
         <remap from="wpc_app_bridge/target" to="/target"/>
     </node>
+
+    <executable cmd="./start_app.sh" output="screen" />
 </launch>
