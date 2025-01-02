@@ -1,3 +1,5 @@
 <launch>
     <include file="$(find-pkg-share moti_auto_launch)/launch/localization/ioo_ros2.launch.xml"/>
+    <include file="$(find-pkg-share moti_auto_launch)/launch/localization/icp_odom_ros2.launch.xml"/>
+    <include file="$(find-pkg-share moti_auto_launch)/launch/localization/tf.launch.xml"/>
 </launch>

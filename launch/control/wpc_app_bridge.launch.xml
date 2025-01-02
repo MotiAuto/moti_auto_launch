@@ -6,7 +6,7 @@
 
     <node pkg="wpc_app_bridge" exec="wpc_app_bridge_node">
         <remap from="wpc_app_bridge/current" to="/current"/>
-        <remap from="wpc_app_bridge/target" to="/target"/>
+        <remap from="wpc_app_bridge/target" to="/goal_pose"/>
     </node>
 
     <executable cmd="./start_app.sh" output="screen" />

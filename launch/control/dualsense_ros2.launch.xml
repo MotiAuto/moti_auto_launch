@@ -4,7 +4,9 @@
     <node pkg="dualsense_ros2" exec="dualsense_ros2_node" name="dualsense_ros2_node">
         <remap from="/joy" to="/joy"/>
 
-        <remap from="/dualsense/twist" to="/dualsense/twist"/>
+        <remap from="/dualsense/twist" to="/cmd_vel"/>
         <remap from="/dualsense/f" to="/dualsense/f"/>
+
+        <param name="max_pow" value="3.0" />
     </node>
 </launch>

@@ -1,6 +1,6 @@
 <launch>
     <node pkg="serial_controller" exec="serial_controller_node" name="serial_controller_node">
-        <remap from="/to_pico" to="/to_pico"/>
+        <remap from="/to_pico" to="/rpms"/>
         
         <param name="port_path" value="/dev/ttyACM0"/>
     </node>

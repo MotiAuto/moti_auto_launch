@@ -1,0 +1,9 @@
+<launch>
+    <node pkg="icp_odom_ros2" exec="icp_odom_ros2_node">
+        <remap from="/pointcloud" to="/camera/camera/depth/cloud"/>
+        <remap from="/euler" to="/posture/imu"/>
+        <remap from="/current" to="/current/realsense"/>
+
+        <param name="frame_id" value="camera_link"/>
+    </node>
+</launch>

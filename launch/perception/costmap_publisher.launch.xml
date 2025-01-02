@@ -1,0 +1,10 @@
+<launch>
+    <node pkg="costmap_publisher" exec="costmap_publisher_node">
+        <remap from="/map" to="/map"/>
+        <remap from="/object" to="/perception/object"/>
+        <remap from="/line" to="/perception/line"/>
+
+        <param name="max_range_x" value="10.0"/>
+        <param name="max_range_y" value="10.0"/>
+    </node>
+</launch>

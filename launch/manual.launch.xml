@@ -1,0 +1,5 @@
+<launch>
+    <include file="$(find-pkg-share moti_auto_launch)/launch/control/dualsense_ros2.launch.xml"/>
+
+    <include file="$(find-pkg-share moti_auto_launch)/launch/control.launch.xml"/>
+</launch>
