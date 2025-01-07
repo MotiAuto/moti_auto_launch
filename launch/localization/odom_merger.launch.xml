@@ -2,8 +2,8 @@
     <node pkg="odom_merger" exec="odom_merger_node">
         <remap from="/current" to="/current/realsense"/>
         <remap from="/merged/current" to="/current/merged"/>
+        <remap from="/real/path" to="/real/path"/>
 
-        <param name="frame_id" value="map" />
-        <param name="child_frame_id" value="base_link" />
+        <param name="frame_id" value="base_link" />
     </node>
 </launch>

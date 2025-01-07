@@ -1,4 +1,4 @@
 <launch>
-    <include file="$(find-pkg-share moti_auto_launch)/launch/sensing/imu.launch.xml"/>
+    <!-- <include file="$(find-pkg-share moti_auto_launch)/launch/sensing/imu.launch.xml"/> -->
     <include file="$(find-pkg-share moti_auto_launch)/launch/sensing/rs_launch.py"/>
 </launch>
