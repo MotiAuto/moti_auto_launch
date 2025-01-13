@@ -1,0 +1,10 @@
+<launch>
+    <node pkg="pifod_ros2" exec="pifod_ros2_node">
+        <remap from="/pointcloud" to="/voxel_grid_filter"/>
+        <remap from="/pose" to="/current"/>
+        <remap from="/path" to="/path"/>
+
+        <param name="icp_max_iter" value="100"/>
+        <param name="icp_tolerance" value="1.0"/>
+    </node>
+</launch>

@@ -2,5 +2,4 @@
     <!-- <include file="$(find-pkg-share moti_auto_launch)/launch/perception/ransac_line_detector.launch.xml"/> -->
     <!-- <include file="$(find-pkg-share moti_auto_launch)/launch/perception/webcam_face_detector.launch.xml"/> -->
     <!-- <include file="$(find-pkg-share moti_auto_launch)/launch/perception/costmap_publisher.launch.xml"/> -->
-    <include file="$(find-pkg-share moti_auto_launch)/launch/perception/voxel_grid_filter_ros2.launch.xml"/>
 </launch>
