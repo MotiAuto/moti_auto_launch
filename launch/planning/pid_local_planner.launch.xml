@@ -1,7 +1,7 @@
 <launch>
     <node pkg="pid_local_planner" exec="pid_local_planner_node">
         <remap from="/path" to="/path"/>
-        <remap from="/current_pose" to="/current/merged"/>
+        <remap from="/current_pose" to="/current"/>
         <remap from="/cmd_vel" to="/cmd_vel"/>
 
         <param name="p_gain" value="3.0"/>
