@@ -1,8 +1,8 @@
 <launch>
     <node pkg="odom_poser_ros2" exec="odom_poser_ros2_node">
-        <remap from="/odom" to="/rtabmap/odom"/>
-        <remap from="/current" to="/current"/>
-        <remap from="/real/path" to="/real/path"/>
+        <remap from="/odom" to="/localization/odom"/>
+        <remap from="/current" to="/localization/current"/>
+        <remap from="/real/path" to="/localization/path"/>
 
         <param name="frame_id" value="map" />
     </node>

@@ -1,8 +1,8 @@
 <launch>
     <node pkg="pid_local_planner" exec="pid_local_planner_node">
-        <remap from="/path" to="/path"/>
-        <remap from="/current_pose" to="/current"/>
-        <remap from="/cmd_vel" to="/cmd_vel"/>
+        <remap from="/path" to="/planning/path"/>
+        <remap from="/current_pose" to="/localization/current"/>
+        <remap from="/cmd_vel" to="/planning/cmd_vel"/>
 
         <param name="p_gain" value="3.0"/>
         <param name="i_gain" value="0.001"/>

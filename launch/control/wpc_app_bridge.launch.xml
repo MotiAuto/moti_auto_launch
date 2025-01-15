@@ -5,7 +5,7 @@
     </node>
 
     <node pkg="wpc_app_bridge" exec="wpc_app_bridge_node">
-        <remap from="wpc_app_bridge/current" to="/current"/>
+        <remap from="wpc_app_bridge/current" to="/localization/current"/>
         <remap from="wpc_app_bridge/target" to="/goal_pose"/>
     </node>
 

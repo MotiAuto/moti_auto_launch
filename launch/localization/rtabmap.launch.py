@@ -431,7 +431,7 @@ def generate_launch_description():
         DeclareLaunchArgument('map_frame_id',   default_value='map',                description='Output map frame id (TF).'),
         DeclareLaunchArgument('map_topic',      default_value='map',                description='Map topic name.'),
         DeclareLaunchArgument('publish_tf_map', default_value='true',               description='Publish TF between map and odomerty.'),
-        DeclareLaunchArgument('namespace',      default_value='rtabmap',            description=''),
+        DeclareLaunchArgument('namespace',      default_value='localization',            description=''),
         DeclareLaunchArgument('database_path',  default_value='~/.ros/rtabmap.db',  description='Where is the map saved/loaded.'),
         DeclareLaunchArgument('topic_queue_size', default_value='10',               description='Queue size of individual topic subscribers.'),
         DeclareLaunchArgument('queue_size',     default_value='10',                 description='Backward compatibility, use "sync_queue_size" instead.'),
@@ -452,9 +452,9 @@ def generate_launch_description():
         DeclareLaunchArgument('approx_sync_max_interval',  default_value='0.0', description='(sec) 0 means infinite interval duration (used with approx_sync=true)'),
 
         # RGB-D related topics
-        DeclareLaunchArgument('rgb_topic',           default_value='/camera/camera/color/image_raw',       description=''),
-        DeclareLaunchArgument('depth_topic',         default_value='/camera/camera/aligned_depth_to_color/image_raw', description=''),
-        DeclareLaunchArgument('camera_info_topic',   default_value='/camera/camera/color/camera_info',            description=''),
+        DeclareLaunchArgument('rgb_topic',           default_value='/sensing/realsense/color/image_raw',       description=''),
+        DeclareLaunchArgument('depth_topic',         default_value='/sensing/realsense/aligned_depth_to_color/image_raw', description=''),
+        DeclareLaunchArgument('camera_info_topic',   default_value='/sensing/realsense/color/camera_info',            description=''),
         
         # Stereo related topics
         DeclareLaunchArgument('stereo_namespace',        default_value='/stereo_camera', description=''),
@@ -497,9 +497,9 @@ def generate_launch_description():
         DeclareLaunchArgument('odom_guess_min_rotation',    default_value='0.0',   description=''),
 
         # imu
-        DeclareLaunchArgument('imu_topic',        default_value='/imu/data', description='Used with VIO approaches and for SLAM graph optimization (gravity constraints).'),
+        DeclareLaunchArgument('imu_topic',        default_value='/sensing/haya/imu', description='Used with VIO approaches and for SLAM graph optimization (gravity constraints).'),
         DeclareLaunchArgument('wait_imu_to_init', default_value='false',     description=''),
-        DeclareLaunchArgument('always_check_imu_tf', default_value='true',     description='The odometry node will always check if TF between IMU frame and base frame has changed. If false, it is checked till a valid transform is initialized.'),
+        DeclareLaunchArgument('always_check_imu_tf', default_value='false',     description='The odometry node will always check if TF between IMU frame and base frame has changed. If false, it is checked till a valid transform is initialized.'),
 
         # User Data
         DeclareLaunchArgument('subscribe_user_data',   default_value='false',            description='User data synchronized subscription.'),
