@@ -4,10 +4,10 @@
         <remap from="/current_pose" to="/localization/current"/>
         <remap from="/cmd_vel" to="/planning/cmd_vel"/>
 
-        <param name="p_gain" value="3.0"/>
+        <param name="p_gain" value="1.5"/>
         <param name="i_gain" value="0.001"/>
         <param name="d_gain" value="0.001"/>
-        <param name="limit_max" value="3.0"/>
-        <param name="limit_min" value="-3.0"/>
+        <param name="max_limit" value="3.0"/>
+        <param name="min_limit" value="-3.0"/>
     </node>
 </launch>
