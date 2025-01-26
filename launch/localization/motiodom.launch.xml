@@ -1,6 +1,6 @@
 <launch>
     <node pkg="motiodom" exec="motiodom_node">
 
-        <param name="enable_reverse" value="false"/>
+        <param name="enable_reverse" value="true"/>
     </node>
 </launch>
